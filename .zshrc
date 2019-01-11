@@ -81,3 +81,6 @@ alias puback="docker exec -ti -w /var/www/html/lbo_symfony/lbo_apiback lbo_engin
 alias dock="docker exec -ti -w /var/www/html/lbo_symfony$(pwd | awk -F 'lbo_symfony' '{print $2}' | awk -F 'vendor' '{print $1}') lbo_engine bash"
 alias newman="./tests/newman/run.sh"
 alias redoc="docker exec -ti lbo_engine sh -c '/bin/bash /home/engine/scripts/generateSwaggerJson.sh'"
+
+alias redisFix=$'sudo docker ps -a | awk \'{ print $1,$2 }\' | grep bitnami/redis:5.0-debian-9 | awk \'{print $1 }\' | xargs -I {} docker stop {} | xargs -I {} docker rm {} && cd /var/www/docker-dev && sudo docker-compose up -d'
+
