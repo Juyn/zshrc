@@ -62,7 +62,7 @@ eval $(thefuck --alias)
 
 # Aliases
 
-alias ciproduct="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders lbo_engine composer install && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders lbo_engine chmod -R 777 /var/www/html/lbo_symfony/lbo_services/lbo_orders/var/ /var/www/html/lbo_symfony/lbo_services/lbo_orders/vendor/ && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders lbo_engine git checkout var/"
+alias ciproduct="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_products lbo_engine composer install && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders lbo_engine chmod -R 777 /var/www/html/lbo_symfony/lbo_services/lbo_orders/var/ /var/www/html/lbo_symfony/lbo_services/lbo_orders/vendor/ && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders lbo_engine git checkout var/"
 alias ciorder="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders lbo_engine composer install && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders chmod -R 777 /var/www/html/lbo_symfony/lbo_services/lbo_orders /var/ /var/www/html/lbo_symfony/lbo_services/lbo_orders /vendor/ && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders git checkout var/"
 alias ciutility="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_utilities lbo_engine composer install && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_utilities chmod -R 777 /var/www/html/lbo_symfony/lbo_services/lbo_utilities /var/ /var/www/html/lbo_symfony/lbo_services/lbo_utilities /vendor/ && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_utilities git checkout var/"
 alias ciuser="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_users lbo_engine composer install && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_users chmod -R 777 /var/www/html/lbo_symfony/lbo_services/lbo_users /var/ /var/www/html/lbo_symfony/lbo_services/lbo_users /vendor/ && docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_users git checkout var/"
@@ -70,7 +70,7 @@ alias cimailer="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_ma
 alias cifront="docker exec -ti -w /var/www/html/lbo_symfony/lbo_apifront lbo_engine composer install && docker exec -ti -w /var/www/html/lbo_symfony/lbo_apifront lbo_engine chmod -R 777 /var/www/html/lbo_symfony/lbo_apifront/var/ /var/www/html/lbo_symfony/lbo_apifront/vendor/ && docker exec -ti -w /var/www/html/lbo_symfony/lbo_apifront lbo_engine git checkout var/"
 alias ciback="docker exec -ti -w /var/www/html/lbo_symfony/lbo_apiback lbo_engine composer install && docker exec -ti -w /var/www/html/lbo_symfony/lbo_apiback lbo_engine chmod -R 777 /var/www/html/lbo_symfony/lbo_apiback/var/ /var/www/html/lbo_symfony/lbo_apiback/vendor/ && docker exec -ti -w /var/www/html/lbo_symfony/lbo_apiback lbo_engine git checkout var/"
 
-alias puproduct="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders lbo_engine vendor/bin/phpunit"
+alias puproduct="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_products lbo_engine vendor/bin/phpunit"
 alias puorder="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_orders lbo_engine vendor/bin/phpunit"
 alias puutility="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_utilities lbo_engine vendor/bin/phpunit"
 alias puuser="docker exec -ti -w /var/www/html/lbo_symfony/lbo_services/lbo_users lbo_engine vendor/bin/phpunit"
